@@ -26,7 +26,7 @@ def api_user():
 
 @app.route("/api/check-user", methods=["POST"])
 def api_checkUser():
-	print(request)
+	print(request.data)
 	if request.method == "POST":
 		return request.data
 	else:

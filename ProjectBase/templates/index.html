@@ -12,9 +12,10 @@
 	<script>
 		const a = document.getElementById("base")
 		fetch("/api/check-user", {
-			"body": JSON.stringify({
+			"method": "POST",
+			"body": {
 				"sample": "Hi"
-			})
+			}
 		}).then(r => {
 			a.textContent(r.json())
 		})
