@@ -7,4 +7,4 @@
 
 ---
 ### Installation
-> There are primary things which are very required to do, you need to have `vir
+> There are primary things which are very required to do, you need to have `virtual environment` before you have these packages.
