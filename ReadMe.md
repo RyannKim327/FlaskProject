@@ -7,7 +7,7 @@
 
 ---
 ### Packages
-> Please read the [#Installation](Installation) first, before you proceed.
+> Please read the [Installation](#installation) first, before you proceed.
 
 1. Virtual Environment
 ```Bash
