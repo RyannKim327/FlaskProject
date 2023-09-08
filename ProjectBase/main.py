@@ -23,3 +23,7 @@ def api_user():
 	return jsonify({
 		"users": "sample"
 	})
+
+@app.route("/api/check-user", method=["POST"])
+def api_checkUser():
+	
