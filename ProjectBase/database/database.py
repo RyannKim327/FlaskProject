@@ -21,3 +21,10 @@ def addUser(name: str, password: str):
 	password = hash(password)
 	cur.execute(f"INSERT INTO users (usn, pass) VALUES (?, ?)", (name, password))
 	con.commit()
+
+def deleteUser(id: int):
+	con = sqlite3.connect("db.sqlite")
+	cur = con.cursor()
+	password = hash(password)
+	cur.execute(f"DELETE FROM users	WHERE ID = ?", id)
+	con.commit()
