@@ -31,8 +31,14 @@ pip install flask
 +- ProjectBase
 +- venv
 ```
+> The `ProjectBase is the app name i'm using. meaning to say, this is the folder where I add all my resources inside of my flask project. next is you need to create a file inside of your folder, example is main.py.
+```
 + Flask Project
 +- ProjectBase
+  +- main.py
 +- venv
 ```
-> The `ProjectBase is the app name i'm using. meaning to say, this is the folder where I add all my resources inside of my flask project. next is you need to create a file inside of your folder,
+
+> Inside of your file add this simple code
+``` Python
+from 
