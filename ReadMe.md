@@ -7,7 +7,18 @@
 
 ---
 ### Packages
-> Please read the [#Installation](Installa)
+> Please read the [#Installation](Installation) first, before you proceed.
+
+1. Virtual Environment
+```Bash
+pip install virtualenv
+```
+
+2. Flask
+``` Bash
+pip install flask
+```
+
 
 ---
 ### Installation
