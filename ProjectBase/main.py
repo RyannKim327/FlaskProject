@@ -24,8 +24,9 @@ def api_user():
 		"users": "sample"
 	})
 
-@app.route("/api/check-user", method=["POST"])
+@app.route("/api/check-user", methods=["POST"])
 def api_checkUser():
+	print(request)
 	if request.method == "POST":
 		return request.data
 	else:
