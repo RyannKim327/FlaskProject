@@ -2,7 +2,7 @@ import sqlite3, hashlib
 
 class Database:
 	def __init__(self):
-		self.con = sqlite3.connect("db.sqlite")
+		self.con = sqlite3.connect("db.sqlite", check_same_thread=False)
 		self.cur = self.con.cursor()
 		self.cur.execute("""CREATE TABLE IF NOT EXISTS users (
 			'ID' INTEGER PRIMARY KEY NOT NULL, 
@@ -27,6 +27,6 @@ class Database:
 			self.cur.execute("SELECT * FROM users WHERE usn LIKE '%?%'", usn)
 
 	def deleteUser(self, _id: str):
-		self.cur.execute(f"DELETE FROM users WHERE ID = {_id}")
+		self.cur.execute(f"DELETE FROM users WHERE ID = ?", (_id))
 		self.con.commit()
 	
