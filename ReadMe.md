@@ -6,5 +6,9 @@
 > `Flask` for me is a type of python package, which is a good alternative for `Django`. This package looks like Laravel but easier to use and to setup.
 
 ---
+### Packages
+> Please read the [#Installation](Installa)
+
+---
 ### Installation
 > There are primary things which are very required to do, you need to have `virtual environment` before you have these packages. Then you also need to initiate and activate the virtualenv first, before you install flask. To start execute `pip install virtualenv` then `virtualenv venv`.  Next is you need to activate by executing `.\venv\Script\activate` for windows. And lastly, you need to install it thru `pip install flask`
