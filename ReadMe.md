@@ -25,4 +25,8 @@ pip install flask
 
 ---
 ### Start my app
-> First thing you need to know, is to 
+> First thing you need to know, is to build a simple webpage here, but first, you need to create a Folder just same as the directory shown below.
+```
+
+venv
+```
