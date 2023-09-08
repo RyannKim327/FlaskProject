@@ -11,6 +11,12 @@
 	</body>
 	<script>
 		const a = document.getElementById("base")
-		fetch("/api/users")
+		fetch("/api/users", {
+			"body": JSON.stringify({
+				"sample": "Hi"
+			})
+		}).then(r => {
+			a.textContent(r.json())
+		})
 	</script>
 </html>
