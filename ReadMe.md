@@ -50,3 +50,11 @@ def index():
 	return "<h1>Hello</h1>"
 ```
 > In this format, you'll see a html code, inside of your python which can be seen as like as the webpage.
+
+---
+### How to run
+> So basically, you need to execute to your terminal like this:
+``` Bash
+flask --app ProjectBase/main run
+```
+> Where ProjectBase is our folder and main is our index or file name or the main program.
