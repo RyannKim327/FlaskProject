@@ -20,11 +20,12 @@ class Database:
 		self.cur.execute(f"INSERT INTO users (usn, pass) VALUES (?, ?)", (name, password))
 		self.con.commit()
 
-	def getUsers(self, usn: str):
+	def getUsers(self, usn: str = ""):
 		if usn == "":
-			return []
+			res = self.cur.execute("SELECT * FROM users")
 		else:
-			self.cur.execute("SELECT * FROM users WHERE usn LIKE '%?%'", usn)
+			res = self.cur.execute("SELECT * FROM users WHERE usn LIKE '%?%'", usn)		
+		return res.fetchall()
 
 	def deleteUser(self, _id: str):
 		self.cur.execute(f"DELETE FROM users WHERE ID = ?", (_id))
