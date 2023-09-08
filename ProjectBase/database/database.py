@@ -9,21 +9,17 @@ class Database:
 			'usn' TEXT, 
 			'pass' TEXT
 		)""")
-		se
+		self.con.commit()
 
 	def __hash__(data: str):
 		return hashlib.sha384(data.encode()).hexdigest()
 
-# User
-def addUser(name: str, password: str):
-	con = sqlite3.connect("db.sqlite")
-	cur = con.cursor()
-	password = hash(password)
-	cur.execute(f"INSERT INTO users (usn, pass) VALUES (?, ?)", (name, password))
-	con.commit()
+	# User
+	def addUser(self,name: str, password: str):
+		password = hash(password)
+		self.cur.execute(f"INSERT INTO users (usn, pass) VALUES (?, ?)", (name, password))
+		self.con.commit()
 
-def deleteUser(_id: str):
-	con = sqlite3.connect("db.sqlite")
-	cur = con.cursor()
-	cur.execute(f"DELETE FROM users	WHERE ID = ?", (_id))
-	con.commit()
+	def deleteUser(self, _id: str):
+		self.cur.execute(f"DELETE FROM users WHERE ID = ?", (_id))
+		self.con.commit()
