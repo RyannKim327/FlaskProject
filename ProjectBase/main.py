@@ -1,4 +1,4 @@
-from flask import Flask, render_template, jsonify
+from flask import Flask, render_template, jsonify, request
 from flask_cors import CORS
 from database.database import *
 
@@ -26,4 +26,5 @@ def api_user():
 
 @app.route("/api/check-user", method=["POST"])
 def api_checkUser():
-	
+	if request.method == "POST":
+		request.data
