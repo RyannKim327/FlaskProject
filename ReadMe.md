@@ -41,4 +41,12 @@ pip install flask
 
 > Inside of your file add this simple code
 ``` Python
-from 
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def index():
+	return "<h1>Hello</h1>"
+```
+> In this format, you'll see a html code, inside of your python which can be seen as like as the webpage.
