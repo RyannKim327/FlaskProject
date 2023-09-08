@@ -1,18 +1,18 @@
 import sqlite3, hashlib
 
-def hash(data: str):
-	return hashlib.sha384(data.encode()).hexdigest()
+class Database:
+	def __init__(self):
+		self.con = sqlite3.connect("db.sqlite")
+		self.cur = self.con.cursor()
+		self.cur.execute("""CREATE TABLE IF NOT EXISTS users (
+			'ID' INTEGER PRIMARY KEY NOT NULL, 
+			'usn' TEXT, 
+			'pass' TEXT
+		)""")
+		se
 
-con = sqlite3.connect("db.sqlite")
-cur = con.cursor()
-
-cur.execute("""CREATE TABLE IF NOT EXISTS users (
-	'ID' INTEGER PRIMARY KEY NOT NULL, 
-	'usn' TEXT, 
-	'pass' TEXT
-)""")
-
-con.commit()
+	def __hash__(data: str):
+		return hashlib.sha384(data.encode()).hexdigest()
 
 # User
 def addUser(name: str, password: str):
@@ -22,7 +22,7 @@ def addUser(name: str, password: str):
 	cur.execute(f"INSERT INTO users (usn, pass) VALUES (?, ?)", (name, password))
 	con.commit()
 
-def deleteUser(_id: int):
+def deleteUser(_id: str):
 	con = sqlite3.connect("db.sqlite")
 	cur = con.cursor()
 	cur.execute(f"DELETE FROM users	WHERE ID = ?", (_id))
