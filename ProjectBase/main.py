@@ -4,7 +4,7 @@ from database.database import *
 
 db = Database()
 app = Flask(__name__)
-app.con
+app.config.from_object(__name__)
 
 CORS(app, resources={
 	r'/*': {
