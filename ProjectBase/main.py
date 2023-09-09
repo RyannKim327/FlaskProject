@@ -3,7 +3,7 @@ from flask_cors import CORS
 from database.database import *
 
 db = Database()
-app = Flask(__name__)
+app = Flask(__name__, static_url_path="/static")
 app.config.from_object(__name__)
 
 CORS(app, resources={

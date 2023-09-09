@@ -58,3 +58,11 @@ def index():
 flask --app ProjectBase/main run
 ```
 > Where ProjectBase is our folder and main is our index or file name or the main program.
+
+---
+### How to setup with SQLite3
+> Since SQLite is a default in python 2.x or auto installed, you don't need to install it manually. So first, you need to create a table like this code:
+``` Python
+import sqlite3
+
+```
