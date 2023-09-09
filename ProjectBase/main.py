@@ -31,3 +31,10 @@ def api_checkUser():
 		return request.data
 	else:
 		return "hehe"
+
+# Get Credentials
+@app.route("/creds-user")
+def getCookies():
+	return jsonify({
+		"data": request.cookies.get("user")
+	})
