@@ -9,6 +9,11 @@ class Database:
 			'usn' TEXT, 
 			'pass' TEXT
 		)""")
+		self.cur.execute("""CREATE TABLE IF NOT EXISTS messages (
+			'ID' INTEGER PRIMARY KEY NOT NULL, 
+			'from' TEXT, 
+			'to' TEXT
+		)""")
 		self.con.commit()
 
 	def __hash__(data: str):
@@ -33,5 +38,5 @@ class Database:
 
 	# Message
 	def createMessage(self, _from: str, _to: str, msg: str):
-		self.cur.execute(f"DELETE FROM users WHERE ID = ?", (_id))
+		self.cur.execute(f"INSERT INTO messages (from, to, msg) VALUES (?, ?, ?)", (_from, _to, msg))
 		self.con.commit()
