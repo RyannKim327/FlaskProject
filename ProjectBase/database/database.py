@@ -12,7 +12,8 @@ class Database:
 		self.cur.execute("""CREATE TABLE IF NOT EXISTS messages (
 			'ID' INTEGER PRIMARY KEY NOT NULL, 
 			'from' TEXT, 
-			'to' TEXT
+			'to' TEXT,
+			'msg' TEXT
 		)""")
 		self.con.commit()
 

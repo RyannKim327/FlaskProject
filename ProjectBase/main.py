@@ -15,6 +15,7 @@ CORS(app, resources={
 # Frontend connection
 @app.route("/")
 def index():
+	Database()
 	return render_template("index.html")
 
 # Api Integration
