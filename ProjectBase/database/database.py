@@ -30,3 +30,6 @@ class Database:
 	def deleteUser(self, _id: str):
 		self.cur.execute(f"DELETE FROM users WHERE ID = ?", (_id))
 		self.con.commit()
+
+	# Message
+	def createMessage()
