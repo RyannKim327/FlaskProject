@@ -38,3 +38,7 @@ def getCookies():
 	return jsonify({
 		"data": request.cookies.get("user")
 	})
+
+@app.route("/creds-logged")
+def logged():
+	
