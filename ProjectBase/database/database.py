@@ -32,4 +32,6 @@ class Database:
 		self.con.commit()
 
 	# Message
-	def createMessage()
+	def createMessage(self, _from: str, _to: str, msg: str):
+		self.cur.execute(f"DELETE FROM users WHERE ID = ?", (_id))
+		self.con.commit()
