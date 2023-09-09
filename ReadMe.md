@@ -66,5 +66,15 @@ flask --app ProjectBase/main run
 import sqlite3
 
 con = sqlite3.connect("db.sqlite", check_same_thread=False) # To connect, check same thread is used for you to delete some files
-cur = con.cursor() # I forgot the use, but maybe the conenction between 
+cur = con.cursor() # I forgot the use, but maybe the conenction between sqlite connection and your query
+
+cur.execute("""CREATE TABLE IF NOT EXISTS users (
+	'ID' INTEGER PRIMARY KEY NOT NULL, 
+	'usn' TEXT, 
+	'pass' TEXT
+)""") # Execution
+
+con.commit() # This is to save as file
 ```
+
+> With the help of these code, with comments, you can see now the use of different functions as basics. The `.execute()` is a useful function, for you to communicate with your 
