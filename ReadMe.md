@@ -61,8 +61,10 @@ flask --app ProjectBase/main run
 
 ---
 ### How to setup with SQLite3
-> Since SQLite is a default in python 2.x or auto installed, you don't need to install it manually. So first, you need to create a table like this code:
+> Since SQLite is a default in python 2.x or auto installed, you don't need to install it manually. So first, you need to connect to your sqlite database file and create a table like this code:
 ``` Python
 import sqlite3
 
+con = sqlite3.connect("db.sqlite", check_same_thread=False) # To connect, check same thread is used for you to delete some files
+cur = con.cursor() # I forgot the use, but maybe the conenction between 
 ```
