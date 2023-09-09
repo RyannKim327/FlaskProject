@@ -41,4 +41,12 @@ def getCookies():
 
 @app.route("/creds-logged")
 def logged():
-	
+	if request.cookies.get("user") != "":
+		return jsonify({
+			"status": True,
+			"data": "Logged in"
+		})
+	return jsonify({
+		"status": True,
+		"data": "Logged in"
+	})
