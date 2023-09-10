@@ -43,4 +43,4 @@ class Database:
 		self.con.commit()
 	
 	def getMessage(self, _usr: str):
-		self.cur.execute(f"")
+		self.cur.execute(f"SELECT * FROM messages WHERE from = ")
