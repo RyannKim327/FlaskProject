@@ -1,4 +1,4 @@
-import sqlite3, hashlib, os
+import sqlite3, hashlib, json
 
 class Database:
 	def __init__(self):
@@ -17,7 +17,7 @@ class Database:
 		)""")
 		self.con.commit()
 
-	def __hash__(data: str):
+	def __hash__(self, data: str):
 		return hashlib.sha384(data.encode()).hexdigest()
 
 	# User
@@ -38,7 +38,7 @@ class Database:
 		self.con.commit()
 	
 	def getCurrentUser(self, cookie):
-		_id = cookie
+		_id = cookie.get("user")
 		self.cur.execute(f"SELECT * FROM users WHERE ID = ?", (_id))
 		
 
