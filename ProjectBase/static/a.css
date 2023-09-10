@@ -13,7 +13,7 @@
 
 	--text-color: #ffe5ec;
 
-	--background-glass: #000000aa;
+	--background-glass: #00000010;
 	--text-color-glass: #ffc2d1;
 }
 
@@ -31,6 +31,6 @@ body{
 	display: flex;
 	flex-direction: column;
 	background-color: var(--background-glass);
-	backdrop-filter: blur(10px);
+	backdrop-filter: blur(100px);
 
 }
