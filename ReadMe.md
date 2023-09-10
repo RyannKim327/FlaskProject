@@ -1,6 +1,13 @@
 ### Flask [A simple web based exploration repository]
 #### MPOP Reverse II (Ryann Kim Sesgundo)
 
+| | |
+|---|---|
+| [Introduction](#introduction) | [Installation](#installation) |
+| [Packages](#packages) | [Start my app](#start-my-app) |
+| [How to run](#how-to-run) | [How to add templates](#how-to-add-templates) |
+| [How to add static files]() | |
+
 ---
 ### Introduction
 > `Flask` for me is a type of python package, which is a good alternative for `Django`. This package looks like Laravel but easier to use and to setup.
