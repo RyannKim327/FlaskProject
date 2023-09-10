@@ -1,8 +1,8 @@
-import sqlite3, hashlib
+import sqlite3, hashlib, os
 
 class Database:
 	def __init__(self):
-		self.con = sqlite3.connect("db.sqlite", check_same_thread=False)
+		self.con = sqlite3.connect("ProjectBase/database/db.sqlite", check_same_thread=False)
 		self.cur = self.con.cursor()
 		self.cur.execute("""CREATE TABLE IF NOT EXISTS users (
 			'ID' INTEGER PRIMARY KEY NOT NULL, 
@@ -36,6 +36,9 @@ class Database:
 	def deleteUser(self, _id: str):
 		self.cur.execute(f"DELETE FROM users WHERE ID = ?", (_id))
 		self.con.commit()
+	
+	def getCurrentUser(self, cookie):
+		self.cur.execute()
 
 	# Message
 	def createMessage(self, _from: str, _to: str, msg: str):
