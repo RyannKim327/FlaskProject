@@ -41,3 +41,4 @@ class Database:
 	def createMessage(self, _from: str, _to: str, msg: str):
 		self.cur.execute(f"INSERT INTO messages (from, to, msg) VALUES (?, ?, ?)", (_from, _to, msg))
 		self.con.commit()
+	
