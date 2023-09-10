@@ -102,6 +102,17 @@ def index():
 
 > The tree above, is just an illustration for you to understand more about this, This may help you to uniform and make your workplace better. To call this, just simply setup `static_url_path="/static"` inside of the Flask and do like this sample in your html code:
 
+**main.py**
+``` Python
+from flask import Flask, render_template
+
+app = Flask(__name__, static_url_path="/static")	
+
+@app.route("/")
+def index():
+	return render_template("index.html")
+```
+
 **Styles**
 ``` HTML
 <!DOCTYPE html>
@@ -118,13 +129,13 @@ def index():
 	<script src="/static/styles.css"></script>
 </html>
 ```
-**Styles**
+**Images**
 ``` HTML
 <!DOCTYPE html>
 <html>
 	<body>
-		<link href="/static/styles.css">
-	</head>
+		<img src="/static/img/sample.jpg">
+	</body>
 </html>
 ```
 
