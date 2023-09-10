@@ -10,6 +10,8 @@
 :root{
 	--background-gradient: linear-gradient(to bottom right, #9d4edd, #10002b);
 	--background-color: #9d4edd;
+
+	--text-color: #e0aaff;
 }
 
 body{
@@ -19,4 +21,5 @@ body{
 	background-size: cover;
 	width: 100%;
 	height: 100vh;
+	color: ;
 }
