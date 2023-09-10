@@ -83,7 +83,50 @@ def index():
 	return render_templates("index.html")
 ```
 ---
+### How to add static files
+> We all know that use of static files, is to store some external files such as images, styles and scripts to our project. To start, we need to create a static folder aligned with `main.py` and `templates`.
 
+```
++ Flask Project
++- ProjectBase
+  +- main.py
+  +- static
+	+- img
+		+- sample.jpg
+	+- styles.css
+	+- script.js
+  +- templates
+	+- index.html
++- venv
+```
+
+> The tree above, is just an illustration for you to understand more about this, This may help you to uniform and make your workplace better. To call this, just simply setup `static_url_path="/static"` inside of the Flask and do like this sample in your html code:
+
+**Styles**
+``` HTML
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="/static/styles.css">
+	</head>
+</html>
+```
+**Script**
+``` HTML
+<!DOCTYPE html>
+<html>
+	<script src="/static/styles.css"></script>
+</html>
+```
+**Styles**
+``` HTML
+<!DOCTYPE html>
+<html>
+	<body>
+		<link href="/static/styles.css">
+	</head>
+</html>
+```
 
 ---
 ### How to setup with SQLite3
