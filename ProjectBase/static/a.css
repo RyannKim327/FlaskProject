@@ -39,5 +39,4 @@ body{
 	flex-direction: column;
 	background-color: var(--background-glass);
 	backdrop-filter: blur(100px);
-	align-self: center;
 }
