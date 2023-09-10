@@ -67,9 +67,23 @@ flask --app ProjectBase/main run
 +- ProjectBase
   +- main.py
   +- templates
-	
+	+- index.html
 +- venv
 ```
+---
+### How to use templates
+> To use it, we need ot use the `render_template` from flask package. We will going to return a function with a render template, so that we may call the `html` inside of template.
+``` Python
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route("/")
+def index():
+	return render_templates("index.html")
+```
+---
+
 
 ---
 ### How to setup with SQLite3
