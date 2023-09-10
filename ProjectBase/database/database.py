@@ -38,7 +38,8 @@ class Database:
 		self.con.commit()
 	
 	def getCurrentUser(self, cookie):
-		self.cur.execute()
+		self.cur.execute(f"SELECT * FROM users WHERE ID = ?", (_id))
+		
 
 	# Message
 	def createMessage(self, _from: str, _to: str, msg: str):
