@@ -8,7 +8,7 @@
 }
 
 :root{
-	--background-gradiend: linear-gradient(9d4edd)
+	--background-gradiend: linear-gradient(to bottom right, #9d4edd, #10002b)
 }
 
 body{
