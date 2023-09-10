@@ -8,8 +8,8 @@
 }
 
 :root{
-	--background-gradient: linear-gradient(to bottom right, #9d4edd, #10002b);
-	--background-color: #9d4edd;
+	--background-gradient: linear-gradient(to bottom right, #fb6f92, #ff8fab);
+	--background-color: #fb6f92;
 
 	--text-color: #ffe5ec;
 }
