@@ -11,8 +11,8 @@ class Database:
 		)""")
 		self.cur.execute("""CREATE TABLE IF NOT EXISTS messages (
 			'ID' INTEGER PRIMARY KEY NOT NULL, 
-			'from' TEXT, 
-			'to' TEXT,
+			'_from' TEXT, 
+			'_to' TEXT,
 			'msg' TEXT
 		)""")
 		self.con.commit()
@@ -39,7 +39,7 @@ class Database:
 
 	# Message
 	def createMessage(self, _from: str, _to: str, msg: str):
-		self.cur.execute(f"INSERT INTO messages (from, to, msg) VALUES (?, ?, ?)", (_from, _to, msg))
+		self.cur.execute(f"INSERT INTO messages (_from, _to, msg) VALUES (?, ?, ?)", (_from, _to, msg))
 		self.con.commit()
 	
 	def getMessage(self, _usr: str):
