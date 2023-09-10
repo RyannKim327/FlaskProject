@@ -31,6 +31,6 @@ body{
 	display: flex;
 	flex-direction: column;
 	background-color: var(--background-glass);
-	backdrop-filter: blur(5px);
+	backdrop-filter: blur(50px);
 
 }
