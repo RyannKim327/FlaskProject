@@ -38,5 +38,5 @@ body{
 	display: flex;
 	flex-direction: column;
 	background-color: var(--background-glass);
-	backdrop-filter: blur(100px);
+	backdrop-filter: blur(15px);
 }
