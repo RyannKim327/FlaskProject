@@ -6,7 +6,7 @@
 | [Introduction](#introduction) | [Installation](#installation) |
 | [Packages](#packages) | [Start my app](#start-my-app) |
 | [How to run](#how-to-run) | [How to add templates](#how-to-add-templates) |
-| [How to add static files]() | |
+| [How to add static files](#how-to-add-static-files) | [How to setup with SQLite3](#how-to-setup-with-sqlite3) |
 
 ---
 ### Introduction
@@ -74,7 +74,7 @@ flask --app ProjectBase/main run
 +- ProjectBase
   +- main.py
   +- templates
-	+- index.html
+    +- index.html
 +- venv
 ```
 ---
@@ -98,12 +98,12 @@ def index():
 +- ProjectBase
   +- main.py
   +- static
-	+- img
-		+- sample.jpg
-	+- styles.css
-	+- script.js
+    +- img
+      +- sample.jpg
+    +- styles.css
+    +- script.js
   +- templates
-	+- index.html
+    +- index.html
 +- venv
 ```
 
