@@ -9,8 +9,9 @@
 
 :root{
 	--background-gradiend: linear-gradient(to bottom right, #9d4edd, #10002b)
+	--background-color: 10002b
 }
 
 body{
-
+	background-image: var(--background-gradiend);
 }
