@@ -12,6 +12,8 @@
 	--background-color: #fb6f92;
 
 	--text-color: #ffe5ec;
+
+	--glass
 }
 
 body{
@@ -22,4 +24,8 @@ body{
 	width: 100%;
 	height: 100vh;
 	color: var(--text-color);
+}
+
+.form {
+	background-color: ;
 }
