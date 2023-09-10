@@ -27,5 +27,6 @@ body{
 }
 
 .form {
-	background-color: ;
+	background-color: var(--background-glass);
+	backdrop-filter: blur(5);
 }
