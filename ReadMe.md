@@ -60,6 +60,18 @@ flask --app ProjectBase/main run
 > Where ProjectBase is our folder and main is our index or file name or the main program.
 
 ---
+### How to add templates
+> So basically, we need to create a folder called `templates` aligned with our main.py or the main python file.
+```
++ Flask Project
++- ProjectBase
+  +- main.py
+  +- templates
+	
++- venv
+```
+
+---
 ### How to setup with SQLite3
 > Since SQLite is a default in python 2.x or auto installed, you don't need to install it manually. So first, you need to connect to your sqlite database file and create a table like this code:
 ``` Python
