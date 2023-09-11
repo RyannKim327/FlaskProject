@@ -50,7 +50,7 @@ def logged():
 			"data": "Logged in"
 		})
 	db  = Database()
-	user = db.getCurrentUser()
+	user = db.getCurrentUser(request.cookies.get("user"))
 	return jsonify({
 		"status": False,
 		"data": "Invalids"
