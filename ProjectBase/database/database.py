@@ -53,4 +53,5 @@ class Database:
 		return res.fetchall()
 	
 	def getMessage(self, _from: str, _to: str):
-		res = self.cur.execute(f"SELECT * FROM messages WHERE (_from = ? AND _to = ?) OR (_from = ? AND _to = ?)", (_from, _to, _to, _from))
+		res = self.cur.execute(f"SELECT * FROM messages WHERE (_from = ? AND _to = ?) OR (_from = ? AND _to = ?) ", (_from, _to, _to, _from))
+		return res.fetchall()
