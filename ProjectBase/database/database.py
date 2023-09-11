@@ -39,8 +39,8 @@ class Database:
 	
 	def getCurrentUser(self, cookie):
 		_id = cookie.get("user")
-		self.cur.execute(f"SELECT * FROM users WHERE ID = ?", (_id))
-		
+		res = self.cur.execute(f"SELECT * FROM users WHERE ID = ?", (_id))
+		return res.fetchall()
 		
 
 	# Message
@@ -49,7 +49,8 @@ class Database:
 		self.con.commit()
 	
 	def getMessageList(self, _usr: str):
-		self.cur.execute(f"SELECT * FROM messages WHERE _from = '?' OR _to = '?'", (_usr, _usr))
+		res = self.cur.execute(f"SELECT * FROM messages WHERE _from = '?' OR _to = '?'", (_usr, _usr))
+		return res.fetchall()
 	
 	def getMessage(self, _from: str, _to: str):
-		self.cur.execute(f"SELECT * FROM messages WHERE (_from = ? AND _to = ?) OR (_from = ? AND _to = ?)", (_from, _to, _to, _from))
+		res = self.cur.execute(f"SELECT * FROM messages WHERE (_from = ? AND _to = ?) OR (_from = ? AND _to = ?)", (_from, _to, _to, _from))
