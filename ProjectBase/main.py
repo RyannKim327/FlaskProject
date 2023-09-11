@@ -21,6 +21,8 @@ def index():
 # Api Integration
 @app.route("/api/users")
 def api_user():
+	db = Database()
+	users = db.get
 	return jsonify({
 		"users": "sample"
 	})
