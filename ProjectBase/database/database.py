@@ -30,9 +30,9 @@ class Database:
 		if usn == "":
 			res = self.cur.execute("SELECT * FROM users")
 		elif id != "":
-			res = self.cur.execute("SELECT * FROM users WHERE ID = ?", usn)		
+			res = self.cur.execute("SELECT * FROM users WHERE ID = ?", (id))		
 		else:
-			res = self.cur.execute("SELECT * FROM users WHERE usn LIKE '%?%'", usn)		
+			res = self.cur.execute("SELECT * FROM users WHERE usn LIKE '%?%'", (usn))		
 		return res.fetchall()
 
 	def deleteUser(self, _id: str):
