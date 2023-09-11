@@ -47,18 +47,17 @@ def logged():
 	if request.cookies.get("user") != "":
 		db  = Database()
 		user = db.getCurrentUser(request.cookies)
-	# 	if len(user) > 0:
-	# 		return jsonify({
-	# 			"status": True,
-	# 			"data": "Logged in"
-	# 		})
-	# 	else:
-	# 		return jsonify({
-	# 			"status": False,
-	# 			"data": "Invalids"
-	# 		})
-	# return jsonify({
-	# 	"status": False,
-	# 	"data": "Invalids"
-	# })
-	return user
+		if len(user) > 0:
+			return jsonify({
+				"status": True,
+				"data": "Logged in"
+			})
+		else:
+			return jsonify({
+				"status": False,
+				"data": "Invalids"
+			})
+	return jsonify({
+		"status": False,
+		"data": "Invalids"
+	})
