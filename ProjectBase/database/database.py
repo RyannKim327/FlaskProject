@@ -41,6 +41,7 @@ class Database:
 		_id = cookie.get("user")
 		self.cur.execute(f"SELECT * FROM users WHERE ID = ?", (_id))
 		
+		
 
 	# Message
 	def createMessage(self, _from: str, _to: str, msg: str):
@@ -51,4 +52,4 @@ class Database:
 		self.cur.execute(f"SELECT * FROM messages WHERE _from = '?' OR _to = '?'", (_usr, _usr))
 	
 	def getMessage(self, _from: str, _to: str):
-		self.cur.execute(f"SELECT * FROM messages WHERE (_from = ? AND _to = ?) OR (_from = ? AND _to = ?)", ())
+		self.cur.execute(f"SELECT * FROM messages WHERE (_from = ? AND _to = ?) OR (_from = ? AND _to = ?)", (_from, _to, _to, _from))
