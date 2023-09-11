@@ -42,9 +42,9 @@ class Database:
 	def getCurrentUser(self, cookie):
 		_id = cookie.get("user")
 		if _id == None:
-			res = ""
+			res = []
+		else:
 			res = self.cur.execute(f"SELECT * FROM users WHERE ID = ?", (_id))
-			
 		return res.fetchall()
 		
 
