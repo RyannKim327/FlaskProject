@@ -40,9 +40,9 @@ class Database:
 		self.con.commit()
 	
 	def getCurrentUser(self, cookie):
-		_id = 1 # cookie.get("user")
-		res = self.cur.execute(f"SELECT * FROM users WHERE ID = ?", (_id))
-		return res.fetchall()
+		_id = cookie.get("user")
+		# res = self.cur.execute(f"SELECT * FROM users WHERE ID = ?", (_id))
+		return _id #res.fetchall()
 		
 
 	# Message
