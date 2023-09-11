@@ -40,7 +40,7 @@ class Database:
 		self.con.commit()
 	
 	def getCurrentUser(self, cookie):
-		_id = cookie.get("user")
+		_id =1 # cookie.get("user")
 		res = self.cur.execute(f"SELECT * FROM users WHERE ID = ?", (_id))
 		return res.fetchall()
 		
