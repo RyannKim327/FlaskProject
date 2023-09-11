@@ -29,6 +29,8 @@ class Database:
 	def getUsers(self, usn: str = "", id = ""):
 		if usn == "":
 			res = self.cur.execute("SELECT * FROM users")
+		elif id != "":
+			res = self.cur.execute("SELECT * FROM users WHERE ID = ?", usn)		
 		else:
 			res = self.cur.execute("SELECT * FROM users WHERE usn LIKE '%?%'", usn)		
 		return res.fetchall()
