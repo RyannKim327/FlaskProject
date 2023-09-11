@@ -45,8 +45,8 @@ class Database:
 			res = []
 		else:
 			res = self.cur.execute(f"SELECT * FROM users WHERE ID = ?", (_id))
-		return res.fetchall()
-		
+			res = res.fetchall()
+		return res
 
 	# Message
 	def createMessage(self, _from: str, _to: str, msg: str):
