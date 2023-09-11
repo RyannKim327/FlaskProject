@@ -51,4 +51,4 @@ class Database:
 		self.cur.execute(f"SELECT * FROM messages WHERE _from = '?' OR _to = '?'", (_usr, _usr))
 	
 	def getMessage(self, _from: str, _to: str):
-		self.cur.execute(f"")
+		self.cur.execute(f"SELECT * FROM messages WHERE")
