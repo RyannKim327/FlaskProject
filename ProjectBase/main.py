@@ -22,7 +22,7 @@ def index():
 @app.route("/api/users")
 def api_user():
 	db = Database()
-	users = db.get
+	users = db.getUsers()
 	return jsonify({
 		"users": "sample"
 	})
