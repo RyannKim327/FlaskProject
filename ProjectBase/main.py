@@ -24,7 +24,7 @@ def api_user():
 	db = Database()
 	users = db.getUsers()
 	return jsonify({
-		"users": "sample"
+		"users": users
 	})
 
 @app.route("/api/check-user", methods=["POST"])
