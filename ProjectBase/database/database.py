@@ -47,5 +47,7 @@ class Database:
 		self.cur.execute(f"INSERT INTO messages (_from, _to, msg) VALUES (?, ?, ?)", (_from, _to, msg))
 		self.con.commit()
 	
-	def getMessage(self, _usr: str):
+	def getMessageList(self, _usr: str):
 		self.cur.execute(f"SELECT * FROM messages WHERE _from = '?' OR _to = '?'", (_usr, _usr))
+	
+	def getMessage(self, _from, )
