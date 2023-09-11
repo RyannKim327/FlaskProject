@@ -26,7 +26,7 @@ class Database:
 		self.cur.execute(f"INSERT INTO users (usn, pass) VALUES (?, ?)", (name, password))
 		self.con.commit()
 
-	def getUsers(self, usn: str = "", id = ""):
+	def getUsers(self, usn: str = "", id: str = ""):
 		if usn == "":
 			res = self.cur.execute("SELECT * FROM users")
 		elif id != "":
