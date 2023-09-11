@@ -41,7 +41,7 @@ class Database:
 	
 	def getCurrentUser(self, cookie):
 		_id = 1 # cookie.get("user")
-		res = self.cur.execute(f"SELECT * FROM users WHERE ID = ?", (_id))
+		res = self.cur.execute(f"SELECT * FROM users WHERE ID = ?", (_id)
 		return res.fetchall()
 		
 
