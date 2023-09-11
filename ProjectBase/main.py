@@ -49,6 +49,8 @@ def logged():
 			"status": True,
 			"data": "Logged in"
 		})
+	db  = Database()
+	user = db.getCurrentUser()
 	return jsonify({
 		"status": False,
 		"data": "Invalids"
