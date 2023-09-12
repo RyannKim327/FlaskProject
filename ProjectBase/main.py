@@ -57,7 +57,7 @@ def logged():
 				"status": False,
 				"data": "Invalids"
 			})
-	return jsonify({
+	return jsonify({-
 		"status": False,
 		"data": "Invalids"
 	})
