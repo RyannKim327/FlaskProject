@@ -168,4 +168,4 @@ con.commit() # This is to save as file
 
 ---
 ### Front-end Suggestions
-> Since I'm not yet good enough inn doing front end development skills, I still wou
+> Since I'm not yet good enough inn doing front end development skills, I still would like to share some of my resources. If you want to look for some color palletes, kindly go to [Coolors.co](https://coolors.co) and use [Figma](https://figma.com) to create some templates and to visualized your front end design.
