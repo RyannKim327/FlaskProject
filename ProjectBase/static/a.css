@@ -13,8 +13,11 @@
 
 	--text-color: #ffe5ec;
 
-	--background-glass: #000000	50;
+	--background-glass: #000000 50;
 	--text-color-glass: #ffc2d1;
+
+	--border
+
 }
 
 body{
@@ -43,5 +46,8 @@ body{
 
 .form > .input{
 	display: flex;
-	fl
+	flex-direction: row;
+	justify-content: space-between;
+	margin: .1em 0;
+	border: 1px var() solid;
 }
