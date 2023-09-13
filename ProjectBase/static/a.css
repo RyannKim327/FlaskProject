@@ -55,6 +55,7 @@ body{
 	color: var(--border-solid);
 	padding: 0 .5em;
 	background-color: transparent;
+	align-content: space-between;
 }
 
 input[type='submit'], input[type='button'], button{
