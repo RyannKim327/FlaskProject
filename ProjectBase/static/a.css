@@ -43,6 +43,8 @@ body{
 	background-color: var(--background-glass);
 	backdrop-filter: blur(15px);
 	align-items: center;
+	font-family: 'Times New Roman', Times, serif;
+	color: var(--border-solid);
 }
 
 .form > .input{
@@ -59,7 +61,7 @@ body{
 	margin: .1em 0;
 	border: 1px var(--border-solid) solid;
 	border-radius: .5em;
-	color: var(--border-solid);
+	color: var(--text-color);
 	padding: 0 .5em;
 	background-color: transparent;
 	align-content: space-between;
@@ -74,4 +76,5 @@ input[type='submit'], input[type='button'], button{
 	background-color: transparent;
 	color: var(--border-solid);
 	margin: 0 .1em;
+	color: var(--text-color);
 }
