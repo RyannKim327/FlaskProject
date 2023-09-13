@@ -165,3 +165,7 @@ con.commit() # This is to save as file
 ```
 
 > With the help of these code, with comments, you can see now the use of different functions as basics. The `.execute()` is a useful function, for you to communicate with your SQLite file. For more details about [SQL Queries Basics kindly follow ths link](https://github.com/RyannKim327/SQL-Samples).
+
+---
+### Front-end Suggestions
+> Since I'm not yet good enough inn doing front end development skills, I still wou
