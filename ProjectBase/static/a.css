@@ -56,7 +56,9 @@ body{
 	background-color: transparent;
 }
 
-input[type='submit'], 
+input[type='submit'], input[type='button'], button{
+	text-align: center;
+}
 
 .input > *{
 	background-color: transparent;
