@@ -45,10 +45,14 @@ body{
 	align-items: center;
 }
 
+.form > .input{
+	min-width: 25%;
+}
+
 .input{
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: center;
 	margin: .1em 0;
 	border: 1px var(--border-solid) solid;
 	border-radius: .5em;
@@ -65,4 +69,5 @@ input[type='submit'], input[type='button'], button{
 .input > *{
 	background-color: transparent;
 	color: var(--border-solid);
+	margin: 0 .1em;
 }
