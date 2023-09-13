@@ -16,7 +16,7 @@
 	--background-glass: #000000 50;
 	--text-color-glass: #ffc2d1;
 
-	--border
+	--border-solid: #f72585;
 
 }
 
@@ -43,11 +43,17 @@ body{
 	background-color: var(--background-glass);
 	backdrop-filter: blur(15px);
 }
-
-.form > .input{
+ .input{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	margin: .1em 0;
-	border: 1px var() solid;
+	border: 1px var(--border-solid) solid;
+	border-radius: .25em;
+	color: var(--border-solid);
+}
+
+.form > .input > *{
+	background-color: transparent;
+	color: var(--border-solid);
 }
