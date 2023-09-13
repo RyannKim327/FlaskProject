@@ -26,7 +26,11 @@
 	</body>
 	<script>
 		fetch("/creds-logged").then(r => {
-			
+			return r.json()
+		}).then((r) => {
+			if(r.status){
+				location.href = "/user"
+			}
 		})
 	</script>
 </html>
