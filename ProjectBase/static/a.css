@@ -42,6 +42,7 @@ body{
 	flex-direction: column;
 	background-color: var(--background-glass);
 	backdrop-filter: blur(15px);
+	align-items: center;
 }
 
 .input{
