@@ -46,7 +46,10 @@ body{
 }
 
 .form > .input{
-	min-width: 25%;
+	min-width: 100%;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
 }
 
 .input{
@@ -64,6 +67,7 @@ body{
 
 input[type='submit'], input[type='button'], button{
 	text-align: center;
+	font-size: medium;
 }
 
 .input > *{
