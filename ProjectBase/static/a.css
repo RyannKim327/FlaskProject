@@ -40,3 +40,8 @@ body{
 	background-color: var(--background-glass);
 	backdrop-filter: blur(15px);
 }
+
+.form > .input{
+	display: flex;
+	fl
+}
