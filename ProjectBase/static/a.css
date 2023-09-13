@@ -8,15 +8,15 @@
 }
 
 :root{
-	--background-gradient: linear-gradient(to top  left, #57cc99, #80ed99);
-	--background-color: #57cc99;
+	--background-gradient: linear-gradient(to top  left, #3da35d, #96e072);
+	--background-color: #3da35d;
 
-	--text-color: #ffe5ec;
+	--text-color: #e8fccf;
 
-	--background-glass: #000000 50;
-	--text-color-glass: #ffc2d1;
+	--background-glass: #3e8914 50;
+	--text-color-glass: #ffffff;
 
-	--border-solid: #f72585;
+	--border-solid: #134611;
 
 }
 
