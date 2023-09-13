@@ -25,14 +25,8 @@
 		</div>
 	</body>
 	<script>
-		const a = document.getElementById("base")
-		fetch("/api/check-user", {
-			"method": "POST",
-			"body": {
-				"sample": "Hi"
-			}
-		}).then(r => {
-			a.textContent(r.json())
+		fetch("/creds-logged").then(r => {
+			
 		})
 	</script>
 </html>
