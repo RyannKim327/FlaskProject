@@ -43,17 +43,20 @@ body{
 	background-color: var(--background-glass);
 	backdrop-filter: blur(15px);
 }
- .input{
+
+.input{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	margin: .1em 0;
 	border: 1px var(--border-solid) solid;
-	border-radius: .25em;
+	border-radius: .5em;
 	color: var(--border-solid);
+	padding: 0 .5em;
+	background-color: transparent;
 }
 
-.form > .input > *{
+.input > *{
 	background-color: transparent;
 	color: var(--border-solid);
 }
