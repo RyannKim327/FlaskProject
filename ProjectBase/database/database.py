@@ -27,7 +27,7 @@ class Database:
 		self.con.commit()
 
 	def getUsers(self, usn: str = "", id: str = ""):
-		if usn == "":
+		if usn == "" and id == "":
 			res = self.cur.execute("SELECT * FROM users")
 		elif id != "":
 			res = self.cur.execute("SELECT * FROM users WHERE ID = ?", (id))		

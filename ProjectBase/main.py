@@ -30,6 +30,7 @@ def api_user():
 @app.route("/api/check-user", methods=["POST"])
 def api_checkUser():
 	if request.method == "POST":
+		db = Database()
 		return request.data
 	else:
 		return "hehe"
