@@ -31,8 +31,9 @@
 			if(r.status){
 				location.href = "/user"
 			}else{
+				let usn = document.getElementById("username")
 				fetch("/api/check-user", {
-					"user": 
+					"user": usn.value
 				})
 			}
 		})
