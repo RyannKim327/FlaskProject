@@ -13,12 +13,12 @@
 				<h1>Login Panel</h1>
 				<div class="input">
 					<label for="user">Username: </label>
-					<input type="text" id="user" name="usn">
+					<input type="text" id="user">
 				</div>
 				<div id="register"></div>
 				<div class="input">
 					<label for="pass">Password: </label>
-					<input type="text" id="pass" name="pass">
+					<input type="text" id="pass">
 				</div>
 				<input class="input" type="submit" value="Login" id="submit">
 			</form>
@@ -34,6 +34,10 @@
 				let usn = document.getElementById("username")
 				fetch("/api/check-user", {
 					"user": usn.value
+				}).then((r) => {
+					return r.json()
+				}).then((r) => {
+					if()
 				})
 			}
 		})
