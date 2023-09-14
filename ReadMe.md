@@ -7,6 +7,7 @@
 | [Packages](#packages) | [Start my app](#start-my-app) |
 | [How to run](#how-to-run) | [How to add templates](#how-to-add-templates) |
 | [How to add static files](#how-to-add-static-files) | [How to setup with SQLite3](#how-to-setup-with-sqlite3) |
+| [Front-end Suggestions](#front-end-suggestions) |
 
 ---
 ### Introduction
@@ -168,4 +169,5 @@ con.commit() # This is to save as file
 
 ---
 ### Front-end Suggestions
+
 > Since I'm not yet good enough inn doing front end development skills, I still would like to share some of my resources. If you want to look for some color palletes, kindly go to [Coolors.co](https://coolors.co) and use [Figma](https://figma.com) to create some templates and to visualized your front end design.
