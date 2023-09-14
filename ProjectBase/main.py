@@ -31,6 +31,8 @@ def api_user():
 def api_checkUser():
 	if request.method == "POST":
 		db = Database()
+		user = request.data.user
+		usn = db.getUsers()
 		return request.data
 	else:
 		return "hehe"
