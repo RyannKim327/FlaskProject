@@ -30,6 +30,8 @@
 		}).then((r) => {
 			if(r.status){
 				location.href = "/user"
+			}else{
+				fetch("/")
 			}
 		})
 	</script>
