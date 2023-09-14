@@ -32,8 +32,12 @@ def api_checkUser():
 	if request.method == "POST":
 		db = Database()
 		user = request.data.user
-		usn = db.getUsers()
-		return request.data
+		usn = db.getUsers(id=user)
+		if usn > 0:
+			data = {
+				"status": True
+			}
+		return data
 	else:
 		return "hehe"
 
