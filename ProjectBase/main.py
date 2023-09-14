@@ -35,7 +35,13 @@ def api_checkUser():
 		usn = db.getUsers(id=user)
 		if usn > 0:
 			data = {
-				"status": True
+				"status": True,
+				"msg": "Existing"
+			}
+		else:
+			data = {
+				"status": False,
+				"msg": "Not Existing"
 			}
 		return data
 	else:
