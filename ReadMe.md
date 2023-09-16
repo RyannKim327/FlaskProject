@@ -65,7 +65,10 @@ def index():
 ``` Bash
 flask --app ProjectBase/main run
 ```
-> Where ProjectBase is our folder and main is our index or file name or the main program.
+> Where ProjectBase is our folder and main is our index or file name or the main program. if you want to debug your program kinfly execute this code:
+``` Bash
+flask --app ProjectBase/main --debug run
+```
 
 ---
 ### How to add templates
