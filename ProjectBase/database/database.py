@@ -37,7 +37,7 @@ class Database:
 	
 	def checkUser(self, usn: str, password: str):
 		res = self.cur.execute("SELECT * FROM users WHERE usn = '?' AND pass = '?'", (usn, password))
-		pass
+		return res.fetchall()
 
 	def deleteUser(self, _id: str):
 		self.cur.execute(f"DELETE FROM users WHERE ID = ?", (_id))
