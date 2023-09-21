@@ -28,13 +28,16 @@
 		let is_login = true
 		function login(){
 			if(is_login){
-				let data = {}
 				const user = document.getElementById("user")
 				const pass = document.getElementById("pass")
-				data = {
+				const data = {
 					"user": user.value,
 					"pass": pass.value
 				}
+				fetch("/login", {
+					"method": "POST",
+					body: JSON.stringify(data)
+				})
 			}else{
 				const user = document.getElementById("user")
 				const pass = document.getElementById("pass")
