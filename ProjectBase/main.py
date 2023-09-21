@@ -28,7 +28,9 @@ def api_login():
 		data = db.checkUser(user, password)
 		if len(data) > 0:
 			return jsonify({
-				"status"
+				"status": 200,
+				"msg": "Please wait for redirection",
+				""
 			})
 	else:
 		return jsonify({
