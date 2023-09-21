@@ -26,12 +26,20 @@ def api_login():
 		pass
 	else:
 		return jsonify({
-			""
+			"status": 404,
+			"msg": "Not found"
 		})
 
 @app.route("/api/register", method=["POST"])
 def api_register():
 	db = Database()
+	if request.method == "POST":
+		pass
+	else:
+		return jsonify({
+			"status": 404,
+			"msg": "Not found"
+		})
 
 @app.route("/api/users")
 def api_user():
