@@ -30,7 +30,7 @@ def api_login():
 			return jsonify({
 				"status": 200,
 				"msg": "Please wait for redirection",
-				""
+				"location": "users/"
 			})
 	else:
 		return jsonify({
