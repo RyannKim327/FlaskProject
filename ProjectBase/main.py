@@ -22,6 +22,12 @@ def index():
 @app.route("/api/login", method=["POST"])
 def api_login():
 	db = Database()
+	if request.method == "POST":
+		pass
+	else:
+		return jsonify({
+			""
+		})
 
 @app.route("/api/register", method=["POST"])
 def api_register():
