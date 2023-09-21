@@ -27,6 +27,10 @@ pip install virtualenv
 pip install flask
 ```
 
+3. Flask CORS
+``` Bash
+pip install flask-cors
+```
 ---
 ### Installation
 > There are primary things which are very required to do, you need to have `virtual environment` before you have these packages. Then you also need to initiate and activate the virtualenv first, before you install flask. To start execute `pip install virtualenv` then `virtualenv venv`.  Next is you need to activate by executing `.\venv\Script\activate` for windows. And lastly, you need to install it thru `pip install flask`
@@ -65,7 +69,10 @@ def index():
 ``` Bash
 flask --app ProjectBase/main run
 ```
-> Where ProjectBase is our folder and main is our index or file name or the main program.
+> Where ProjectBase is our folder and main is our index or file name or the main program. if you want to debug your program kinfly execute this code:
+``` Bash
+flask --app ProjectBase/main --debug run
+```
 
 ---
 ### How to add templates
