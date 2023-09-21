@@ -20,6 +20,10 @@ def index():
 
 # Api Integration
 @app.route("/api/login")
+def api_login():
+	db = Database()
+
+@app.route("/api/register")
 
 @app.route("/api/users")
 def api_user():
