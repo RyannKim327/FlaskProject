@@ -21,7 +21,7 @@ class Database:
 		return hashlib.sha384(data.encode()).hexdigest()
 
 	# User
-	def addUser(self,name: str, password: str):
+	def addUser(self, name: str, password: str):
 		password = hash(password)
 		self.cur.execute(f"INSERT INTO users (usn, pass) VALUES (?, ?)", (name, password))
 		self.con.commit()
@@ -34,6 +34,10 @@ class Database:
 		else:
 			res = self.cur.execute("SELECT * FROM users WHERE usn LIKE '%?%'", (usn))		
 		return res.fetchall()
+	
+	def checkUser(self, usn: str, password: str):
+		res = self.cur.execute("SELECT * FROM users WHERE usn = ")
+		pass
 
 	def deleteUser(self, _id: str):
 		self.cur.execute(f"DELETE FROM users WHERE ID = ?", (_id))
