@@ -19,11 +19,13 @@ def index():
 	return render_template("index.html")
 
 # Api Integration
-@app.route("/api/login")
+@app.route("/api/login", method=["POST"])
 def api_login():
 	db = Database()
 
 @app.route("/api/register")
+def api_register():
+	db = Database()
 
 @app.route("/api/users")
 def api_user():
