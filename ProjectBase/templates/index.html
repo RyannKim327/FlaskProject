@@ -26,7 +26,13 @@
 	</body>
 	<script>
 		function login(){
-			const user = document.ge
+			const user = document.getElementById("user")
+			const pass = document.getElementById("pass")
+			const data = {
+				"user": user.value,
+				"pass": pass.value
+			}
+			
 		}
 		fetch("/creds-logged").then(r => {
 			return r.json()
