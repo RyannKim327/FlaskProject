@@ -23,7 +23,7 @@ def index():
 def api_login():
 	db = Database()
 	if request.method == "POST":
-		pass
+		user = request.data
 	else:
 		return jsonify({
 			"status": 404,
