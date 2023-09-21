@@ -28,13 +28,22 @@
 		let is_login = true
 		function login(){
 			if(is_login){
+				let data = {}
+				const user = document.getElementById("user")
+				const pass = document.getElementById("pass")
+				data = {
+					"user": user.value,
+					"pass": pass.value
+				}
+			}else{
 				const user = document.getElementById("user")
 				const pass = document.getElementById("pass")
 				const data = {
 					"user": user.value,
 					"pass": pass.value
-			}
+				}
 
+			}
 		}
 		fetch("/creds-logged").then(r => {
 			return r.json()
