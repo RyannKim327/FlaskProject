@@ -19,6 +19,8 @@ def index():
 	return render_template("index.html")
 
 # Api Integration
+@app.route("/api/login")
+
 @app.route("/api/users")
 def api_user():
 	db = Database()

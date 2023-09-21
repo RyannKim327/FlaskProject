@@ -34,7 +34,7 @@
 					"user": user.value,
 					"pass": pass.value
 				}
-				fetch("/login", {
+				fetch("/api/login", {
 					"method": "POST",
 					"body": JSON.stringify(data)
 				})
