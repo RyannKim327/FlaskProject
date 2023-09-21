@@ -9,7 +9,7 @@
 	</head>
 	<body>
 		<div class="base">
-			<form class="form" onsubmit="login">
+			<form class="form" onsubmit="login()">
 				<h1>Login Panel</h1>
 				<div class="input">
 					<label for="user">Username: </label>
@@ -25,6 +25,9 @@
 		</div>
 	</body>
 	<script>
+		function login(){
+			const user = document.g
+		}
 		fetch("/creds-logged").then(r => {
 			return r.json()
 		}).then((r) => {
