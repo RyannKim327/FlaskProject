@@ -25,14 +25,16 @@
 		</div>
 	</body>
 	<script>
+		let is_login = true
 		function login(){
-			const user = document.getElementById("user")
-			const pass = document.getElementById("pass")
-			const data = {
-				"user": user.value,
-				"pass": pass.value
+			if(is_login){
+				const user = document.getElementById("user")
+				const pass = document.getElementById("pass")
+				const data = {
+					"user": user.value,
+					"pass": pass.value
 			}
-			
+
 		}
 		fetch("/creds-logged").then(r => {
 			return r.json()
