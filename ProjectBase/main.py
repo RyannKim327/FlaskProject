@@ -26,7 +26,10 @@ def api_login():
 		user = request.data.user
 		password = request.data.password
 		data = db.checkUser(user, password)
-		if len(db.)
+		if len(data) > 0:
+			return jsonify({
+				"status"
+			})
 	else:
 		return jsonify({
 			"status": 404,
